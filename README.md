@@ -1,27 +1,13 @@
 # CanonApiProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
+This project was designed for the Canon CCAPI Contest 2019.  All props to shekit for the incredible utilization of TensorFlow for gesture recognition.  You can see his project here: `https://github.com/shekit/alexa-sign-language-translator`.
 
-## Development server
+Forking from his project, I added the ability to capture pictures and use them in the KNN dataset rather than always having to use the video stream in order to gather a training set.  You will have to make a change in the aslTS.js file and point to the server that you want to download the pictures from.  There are some CORS and CROB issues that are addressed by running Chrome in an insecure way. On Mac that boils down to running: `open -a Google\ Chrome --args --disable-web-security --user-data-dir` in the terminal.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Running the Project
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In order to start this project, run `npm install` in your terminal to download the dependencies.  After downloading the dependencies, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
