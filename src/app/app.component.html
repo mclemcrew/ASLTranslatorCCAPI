@@ -1,20 +1,71 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- <app-gesture-recognition></app-gesture-recognition> -->
+<!-- <app-camera></app-camera> -->
+<router-outlet></router-outlet>
+<div style="display:none" id="gesture-div">
+      
+      <div id="status">
+        <p id="status-text">Status: Not Ready</p>
+      </div>
+      <video id="video" src='' muted autoplay playsinline style="display:none"></video>
+      <div class="split-left">
+        <div class="centered">
+            <!-- <button (click)="getBatteryInfo()">Test HTTP Button</button>
+            <button (click)="steadyCamera()">Half</button>
+            <button (click)="takePicture()">Full</button>
+            <button (click)="stopPicture()">Stop</button>
+            <button (click)="setSpeed()">Speed</button> -->
+          <h1 id="text" class="intro-steps">Make sure your gesture pictures are ready or that you are ready to record your gestures!<br><br>If you are ready, click the button below to begin!
+          </h1>
+          <div id="training-list">
+            <div id="example-list" style="color:#222"></div>
+            <div id="add" style="display:none">
+              <form id="add-word" autocomplete="off">
+                <input type="text" id="new-word" placeholder="Add Training word">
+                <br/><br/>
+                <label>
+                  <input type="checkbox" id="is-terminal-word">
+                  Is terminal word?
+                </label>
+                <br/><br/>
+                <input type="submit" value="Add Word">
+                <p><b>Terminal Word</b> - A word that appears as the last word in your query</p>
+                <p>e.g If you intend to ask "What's <b><em>the weather</em></b>?" & "What's <b><em>the time</em></b>?" then <b><em>the weather</em></b> and <b><em>the time</em></b> are terminal words whereas <b><em>what's</em></b> is not</p>
+              </form>
+            </div>
+            <p id="count">Training: 2 words</p>
+            <div id="action-btn">
+                    <div class="column-two portfolio-experiment" id="predict-button" style="display:none">
+                        <a class="selected-text">
+                            <span class="text">Start Predicting</span>
+                            <span class="line -right"></span>
+                            <span class="line -top"></span>
+                            <span class="line -left"></span>
+                            <span class="line -bottom"></span>
+                        </a>
+                    </div>
+                    <div class="column-two portfolio-experiment" id="train-button" style="display:none">
+                        <a class="selected-text">
+                            <span class="text">Start Training</span>
+                            <span class="line -right"></span>
+                            <span class="line -top"></span>
+                            <span class="line -left"></span>
+                            <span class="line -bottom"></span>
+                        </a>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="split-right">
+        <div class="centered">
+          <div id="loader"></div>
+          <h1>
+            <img width="200" height="200" src="" alt="" id="test-photo">
+            <span id="answerText"></span>
+            <span id="interimText"></span>
+          </h1>
+        </div>
+      </div>    
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<!-- <app-split></app-split> -->

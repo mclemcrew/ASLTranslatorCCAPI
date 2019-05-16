@@ -1,0 +1,49 @@
+<div style="background:#ccc;height:100vh">
+
+    <div style="margin:0 32%;position:absolute;top:20%">
+        <mz-card
+          class="darken-1 black-text"
+          [horizontal]="true"
+          [hoverable]="true">
+          <mz-card-title>
+            Camera Control
+          </mz-card-title>
+          <mz-card-content>
+            Use these controls to take pictures while making your gesture.  Once you have determined the appropriate preparation time and duration time for the shot, just click the "Take Pictures" button below.
+          <br>
+          <br>
+            You can also check the status of the battery using the button below to ensure your camera won't fail when taking the shots.
+          <mz-input-container>
+              <input mz-input
+                [label]="'Duration of Shot (in seconds)'"
+                [(ngModel)]="durationOfShot"
+                id="email-input"
+                >
+            </mz-input-container>
+            <mz-input-container>
+                <input mz-input
+                  [label]="'Seconds to Prep (in seconds)'"
+                  [(ngModel)]="prepTime"
+                  id="email-input"
+                  >
+              </mz-input-container>
+            </mz-card-content>
+            <mz-card-action>
+                <button class="pure-material-button-contained-blue" style="margin-right:20px" (click)="getBatteryInfo()">Check Battery</button>
+                <button class="pure-material-button-contained-red" (click)="goBack()">Go Back</button>
+            </mz-card-action>
+              <!-- <button (click)="onChangeAddress()">Submit</button>
+              <button (click)="checkAddress()">Check</button> -->
+        </mz-card>
+        <div class="column-two portfolio-experiment" style="margin-left: 200px" >
+            <a class="selected-text" (click)="callCamera()">
+                <span class="text">Take Pictures</span>
+                <span class="line -right"></span>
+                <span class="line -top"></span>
+                <span class="line -left"></span>
+                <span class="line -bottom"></span>
+            </a>
+        </div>
+        </div>
+
+</div>

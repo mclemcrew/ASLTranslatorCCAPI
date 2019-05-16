@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { MzToastService } from 'ng2-materialize';
+import { CameraService } from './camera.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor() {
+    
+  }
+
+
 }

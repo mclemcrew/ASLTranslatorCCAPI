@@ -1,0 +1,41 @@
+<div style="background:#222;height:100vh" >
+<div style="margin:0 32%;position:absolute;top:20%">
+<mz-card
+  class="darken-1 black-text"
+  [horizontal]="true"
+  [hoverable]="true">
+  <mz-card-title>
+    Camera Credentials
+  </mz-card-title>
+  <mz-card-content>
+    After using the connection wizard on your computer, please specify the IP address and port that the CCAPI is using.
+  
+  <mz-input-container>
+      <input mz-input
+        [label]="'IP_ADDRESS'"
+        [(ngModel)]="IP_ADDRESS"
+        id="email-input"
+        >
+    </mz-input-container>
+    <mz-input-container>
+        <input mz-input
+          [label]="'PORT'"
+          [(ngModel)]="PORT"
+          id="email-input"
+          >
+      </mz-input-container>
+    </mz-card-content>
+      <!-- <button (click)="onChangeAddress()">Submit</button>
+      <button (click)="checkAddress()">Check</button> -->
+</mz-card>
+<div class="column-two portfolio-experiment" style="margin-left: 200px" >
+    <a class="selected-text" (click)="onChangeAddress();checkAddress();">
+        <span class="text">Submit</span>
+        <span class="line -right"></span>
+        <span class="line -top"></span>
+        <span class="line -left"></span>
+        <span class="line -bottom"></span>
+    </a>
+</div>
+</div>
+</div>
